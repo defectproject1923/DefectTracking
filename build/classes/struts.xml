@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+	
+	
+	
+	<package name="master"  extends="struts-default,json-default">
+  
+<action name="loginAction" class="acceltree.login.Login" method="demo">  
+<result name="success">home.jsp</result>
+<result name="error">error.jsp</result>			
+<!-- <result name="success" type="json"></result> -->
+<!-- <result name="error" type="json"></result> -->
+</action> 
+
+
+<action name="userTypeListGridURL" class="acceltree.user.User"
+			method="userTypeListGridMethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		 <action name="userTypeEditurl" class="acceltree.user.User" method="editColor">
+            <result name="success" type="json"> </result>
+            <result name="error" type="json"> </result>
+      </action>
+ <action name="projectListAction" class="acceltree.servlet.ProjectMaster"
+			method="projectListmethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action> 
+		
+		 <action name="issuedListAction" class="acceltree.servlet.CreateDefectServlet"
+			method="issuedListmethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		<action name="categoryListAction" class="acceltree.servlet.CreateDefectServlet"
+			method="defectCategoryListmethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		
+		<action name="maxDefectNoAction" class="acceltree.servlet.CreateDefectServlet"
+			method="maxDefectNoMethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+<action name="saveCreateDefectAction" class="acceltree.servlet.CreateDefectServlet" method="addDefectDetailsMethod">  
+<result name="success">createDefect.jsp</result>
+<result name="error">createDefect.jsp</result>			
+</action> 
+
+<action name="countDefectNoAction" class="acceltree.servlet.CreateDefectServlet"
+			method="countDefectNoMethod">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+</package>  
+</struts>

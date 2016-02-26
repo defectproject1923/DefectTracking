@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 Feb, 2016 12:22:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="acceltree.beans.model.IssuedType" table="IssuedType">
+        <id name="idIssuedType" type="java.lang.Integer">
+            <column name="idIssuedType" />
+            <generator class="identity" />
+        </id>
+        <property name="issuedName" type="string">
+            <column name="issuedName" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
